@@ -21,7 +21,8 @@ export default class extends Component {
   }
   render () {
     const { data } = API
-    console.log('stuff', data)
+    console.info("%c We're using Next.js for this because we got bored", 'background: #021993; color: #fff')
+    console.info("%c The code's up on our git: https://github.com/the-couch/couch-site", 'background: #021993; color: #fff')
     return (
       <Layout>
         <Header />
@@ -111,8 +112,8 @@ export default class extends Component {
           </div>
           <div className='footer__wrapper'>
             <div className='footer caps f fw jcs fill-x'>
-              {data.map((person) => (
-                <Team {...person} />
+              {data.map((person, i) => (
+                <Team key={i} {...person} />
               ))}
             </div>
             <div className='address__info f aic jce fill-x'>
