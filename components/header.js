@@ -30,34 +30,28 @@ export default () => (
         margin: 0;
       }
       .layout {
-        padding: 40px;
+        padding: 30px 20px;
       }
       h1 {
         font-family: 'Archivo Black', sans-serif;
         font-weight: 400;
         font-size: 32px;
-        line-height: 1.1;
-        margin: 14px 0;
+        line-height: 1;
+        margin: 14px 0 28px;
       }
       @media (min-width: 45em) {
         h1 {
           font-size: 54px;
-          margin: 24px 0;
+          margin: 1rem 0 1.5rem;
           line-height: 1;
         }
         .layout {
           padding: 80px;
         }
       }
-      @media (min-height: 600px) {
-        h1 {
-          font-size: 5.4vh;
-          line-height: .9;
-        }
-      }
       @media (min-width: 70em) {
         h1 {
-          margin: 40px 0;
+          margin: 2rem 0 2.6rem;
           font-size: 5vw;
           line-height: .9;
         }
@@ -80,6 +74,9 @@ export default () => (
       }
       .px2 {
         padding: 2rem;
+      }
+      .pt2 {
+        padding-top: 2rem;
       }
       .px1 {
         padding: 1rem;
@@ -141,6 +138,7 @@ export default () => (
         line-height: 1.15;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        padding: 1px 0;
       }
 
       p.small a, p.small {
@@ -148,18 +146,18 @@ export default () => (
       }
       @media (min-width: 30em) {
         p.small, p.small a {
-          font-size: 16px;
+          font-size: 18px;
         }
       }
       `}</style>
     <style jsx>{`
       .header {
-        max-width: 64px;
+        width: 64px;
       }
       `}</style>
     <div>
-      <img className='header' src='/static/icon/faces.gif' />
-      <p>Hello world!</p>
+      <img className='header' src='/static/faces.gif' />
+      <p className='small pt2'>Hello world!</p>
     </div>
   </div>
 )

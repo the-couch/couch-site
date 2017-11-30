@@ -30,9 +30,15 @@ export default class extends Component {
             height: 200px;
             padding-top: 40px;
           }
+          .contact__email {
+            width: 28px;
+          }
           .contact__rotate {
             width: 133px;
             animation: rotating 8s linear infinite;
+            left: 30px;
+            top: 30%;
+            transform: translate(-50%, -50%);
           }
           @media (min-width: 45em) {
             .contact {
@@ -44,10 +50,12 @@ export default class extends Component {
             }
             .contact__rotate {
               width: 165px;
+              top: 24%;
+              left: 20px;
             }
-          }
-          .contact__email {
-            width: 28px;
+            .contact__email {
+              width: 32px;
+            }
           }
           .address {
             max-width: 40px;
@@ -87,7 +95,7 @@ export default class extends Component {
               justify-content: space-between;
             }
           }
-          @media (min-height: 900px) {
+          @media (min-height: 900px) and (min-width: 700px) {
             .footer__wrapper {
               position: fixed;
               bottom: 40px;
@@ -112,44 +120,44 @@ export default class extends Component {
             <section className='content'>
               <h1 className='caps'>The Couch is a small brooklyn based digital studio that makes things for the internet.</h1>
             </section>
-            <section className='pt2'>
-              <p>We want to work with you.</p>
+            <section className=''>
+              <p className='small'>We want to work with you.</p>
             </section>
             <section className='contact jcc aic f mha'>
               <a href='mailto:meetus@thecouch.nyc' className='abs z1 fill-a fit-a' />
-              <img className='contact__rotate abs' src='/static/icon/text.png' />
-              <img className='contact__email' src='/static/icon/Email.png' />
+              <img className='contact__rotate abs' src='/static/text.png' />
+              <img className='contact__email' src='/static/Email.png' />
             </section>
           </div>
           <div className='footer__wrapper'>
             <div className='footer caps f fw jcs fill-x'>
               <div className='footer__ppl'>
                 <div className='footer__img'>
-                  <img src='/static/icon/Kevin.png' />
+                  <img src='/static/Kevin.png' />
                 </div>
                 <a href='http://districtdomain.com' target='_blank'>Kevin Green</a>
               </div>
               <div className='footer__ppl'>
                 <div className='footer__img'>
-                  <img src='/static/icon/Sam.png' />
+                  <img src='/static/Sam.png' />
                 </div>
                 <a href='http://sam-faulkner.com' target='_blank'>Sam Faulkner</a>
               </div>
               <div className='footer__ppl'>
                 <div className='footer__img'>
-                  <img src='/static/icon/costa.png' />
+                  <img src='/static/costa.png' />
                 </div>
                 <a href='http://zeuslives.com' target='_blank'>Costa Damaskos</a>
               </div>
               <div className='footer__ppl'>
                 <div className='footer__img'>
-                  <img src='/static/icon/abby.png' />
+                  <img src='/static/abby.png' />
                 </div>
                 <a href='https://www.youtube.com/watch?v=Mw1tN-zfR9c' target='_blank'>Abby Muir</a>
               </div>
               <div className='footer__ppl'>
                 <div className='footer__img'>
-                  <img src='/static/icon/eric.png' />
+                  <img src='/static/eric.png' />
                 </div>
                 <a href='http://estrattonbailey.com/'>Eric Bailey</a>
               </div>
@@ -159,7 +167,7 @@ export default class extends Component {
                 <p className='ar caps'>Available IRL @<br />87 Richardson St. Suite 6W,<br />Brooklyn, NY 11211</p>
               </div>
               <div>
-                <img className='address px1' src='/static/icon/Address.png' />
+                <img className='address px1' src='/static/Address.png' />
               </div>
             </div>
           </div>
