@@ -1,5 +1,5 @@
 module.exports = ({children}) => (
-  <div className='px2'>
+  <div className='layout'>
     {children}
   </div>
 )
