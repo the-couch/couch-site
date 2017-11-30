@@ -10,6 +10,7 @@ module.exports = ({ name, url, icon }) => (
         padding-bottom: 0px;
       }
       .ppl__img {
+        padding-left: 5px;
         min-height: 30px;
       }
       @media (min-width: 30em) {

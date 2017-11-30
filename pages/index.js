@@ -117,7 +117,7 @@ export default class extends Component {
             </div>
             <div className='address__info f aic jce fill-x'>
               <div>
-                <p className='ar caps'>Available IRL @<br />87 Richardson St. Suite 6W,<br />Brooklyn, NY 11211</p>
+                <p className='ar caps'>Available IRL @<br />87 Richardson St. Suite 6W<br />Brooklyn, NY 11211</p>
               </div>
               <div>
                 <img className='address px1' src='/static/Address.png' />
