@@ -37,8 +37,13 @@ export default class extends Component {
           @media (min-width: 45em) {
             .contact {
               position: fixed;
+              width: 200px;
+              height: 200px;
               right: 80px;
               top: 0px;
+            }
+            .contact__rotate {
+              width: 165px;
             }
           }
           .contact__email {
