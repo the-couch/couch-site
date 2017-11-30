@@ -11,6 +11,7 @@
   "author": "iamkevingreen",
   "license": "ISC",
   "dependencies": {
+    "ffx": "^0.5.1",
     "next": "^4.1.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",

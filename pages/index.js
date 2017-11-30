@@ -37,15 +37,61 @@ export default class extends Component {
           @media (min-width: 45em) {
             .contact {
               position: fixed;
-              right: 20px;
+              right: 80px;
               top: 0px;
             }
           }
           .contact__email {
-            width: 23px;
+            width: 28px;
+          }
+          .address {
+            max-width: 40px;
           }
           .footer {
             padding-top: 40px;
+            padding-bottom: 50px;
+          }
+          .footer__ppl {
+            width: 50%;
+            padding-bottom: 20px;
+          }
+          .footer__img {
+            min-height: 30px;
+          }
+          @media (min-width: 30em) {
+            .footer__ppl {
+              width: 33%;
+            }
+          }
+          @media (min-width: 50em) {
+            .footer__ppl {
+              width: 20%;
+            }
+          }
+          @media (min-width: 80em) {
+            .footer {
+              max-width: 800px;
+              width: 100%;
+            }
+            .footer__ppl {
+              padding-bottom: 0;
+            }
+            .footer__wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+          }
+          @media (min-height: 900px) {
+            .footer__wrapper {
+              position: fixed;
+              bottom: 40px;
+              width: calc(100% - 160px);
+            }
+          }
+          .footer__ppl img {
+            max-width: 23px;
+            padding-bottom: 0px;
           }
           @keyframes rotating {
             0% {
@@ -56,21 +102,62 @@ export default class extends Component {
             }
           }
           `}</style>
-        <div className='wrapper main'>
-          <section className='content'>
-            <h1 className='caps'>The Couch is a small brooklyn based digital studio that makes things for the internet.</h1>
-          </section>
-          <section className='pt2'>
-            <p>We want to work with you.</p>
-          </section>
-          <section className='contact jcc aic f mha'>
-            <a href='mailto:meetus@thecouch.nyc' className='abs z1 fill-a fit-a' />
-            <img className='contact__rotate abs' src='/static/icon/text.png' />
-            <img className='contact__email' src='/static/icon/Email.png' />
-          </section>
-          <section className='footer'>
-            <p className='small'><a href='http://districtdomain.com' target='_blank'>Kevin Green 🍝</a> - <a href='http://sam-faulkner.com' target='_blank'>Sam Faulkner 🔮</a> - <a href='http://zeuslives.com' target='_blank'>Costa Damaskos 🤔</a> - <a href='https://www.youtube.com/watch?v=Mw1tN-zfR9c'>Abby Muir 💀</a> - <a href='http://estrattonbailey.com/'>Eric Bailey 🍺</a></p>
-          </section>
+        <div>
+          <div className='wrapper main'>
+            <section className='content'>
+              <h1 className='caps'>The Couch is a small brooklyn based digital studio that makes things for the internet.</h1>
+            </section>
+            <section className='pt2'>
+              <p>We want to work with you.</p>
+            </section>
+            <section className='contact jcc aic f mha'>
+              <a href='mailto:meetus@thecouch.nyc' className='abs z1 fill-a fit-a' />
+              <img className='contact__rotate abs' src='/static/icon/text.png' />
+              <img className='contact__email' src='/static/icon/Email.png' />
+            </section>
+          </div>
+          <div className='footer__wrapper'>
+            <div className='footer caps f fw jcs fill-x'>
+              <div className='footer__ppl'>
+                <div className='footer__img'>
+                  <img src='/static/icon/Kevin.png' />
+                </div>
+                <a href='http://districtdomain.com' target='_blank'>Kevin Green</a>
+              </div>
+              <div className='footer__ppl'>
+                <div className='footer__img'>
+                  <img src='/static/icon/Sam.png' />
+                </div>
+                <a href='http://sam-faulkner.com' target='_blank'>Sam Faulkner</a>
+              </div>
+              <div className='footer__ppl'>
+                <div className='footer__img'>
+                  <img src='/static/icon/costa.png' />
+                </div>
+                <a href='http://zeuslives.com' target='_blank'>Costa Damaskos</a>
+              </div>
+              <div className='footer__ppl'>
+                <div className='footer__img'>
+                  <img src='/static/icon/abby.png' />
+                </div>
+                <a href='https://www.youtube.com/watch?v=Mw1tN-zfR9c' target='_blank'>Abby Muir</a>
+              </div>
+              <div className='footer__ppl'>
+                <div className='footer__img'>
+                  <img src='/static/icon/eric.png' />
+                </div>
+                <a href='http://estrattonbailey.com/'>Eric Bailey</a>
+              </div>
+            </div>
+            <div className='address__info f aic jce fill-x'>
+              <div>
+                <p className='ar caps'>Available IRL @<br />87 Richardson St. Suite 6W,<br />Brooklyn, NY 11211</p>
+              </div>
+              <div>
+                <img className='address px1' src='/static/icon/Address.png' />
+              </div>
+            </div>
+          </div>
         </div>
       </Layout>
     )

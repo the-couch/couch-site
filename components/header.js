@@ -49,15 +49,30 @@ export default () => (
           padding: 80px;
         }
       }
-      @media (min-width: 50em) {
+      @media (min-height: 600px) {
         h1 {
-          margin: 40px 0;
-          font-size: 72px;
+          font-size: 5.4vh;
           line-height: .9;
         }
       }
+      @media (min-width: 70em) {
+        h1 {
+          margin: 40px 0;
+          font-size: 5vw;
+          line-height: .9;
+        }
+      }
+      .ar {
+        text-align: right;
+      }
       .fit-a {
         top: 0; left: 0; bottom: 0; right: 0;
+      }
+      .fw {
+        flex-wrap: wrap;
+      }
+      fill-x {
+        width: 100%;
       }
       fill-a {
         height: 100%;
@@ -65,6 +80,9 @@ export default () => (
       }
       .px2 {
         padding: 2rem;
+      }
+      .px1 {
+        padding: 1rem;
       }
       .abs {
         position: absolute;
@@ -103,6 +121,11 @@ export default () => (
       .wrapper {
         max-width: 950px;
       }
+      @media (min-width: 70em) {
+        .wrapper {
+          max-width: 68vw;
+        }
+      }
       a {
         text-decoration: none;
         transition: all .25s;
@@ -115,7 +138,7 @@ export default () => (
         font-family: 'Roboto Mono', monospace;
         font-weight: 400;
         font-size: 14px;
-        line-height: 1.5;
+        line-height: 1.15;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
@@ -131,11 +154,11 @@ export default () => (
       `}</style>
     <style jsx>{`
       .header {
-        max-width: 60px;
+        max-width: 64px;
       }
       `}</style>
     <div>
-      <img className='header' src='/static/icon/TV.png' />
+      <img className='header' src='/static/icon/faces.gif' />
       <p>Hello world!</p>
     </div>
   </div>
