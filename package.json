@@ -4,17 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "standard && next",
     "build": "next build",
     "start": "next start"
   },
   "author": "iamkevingreen",
   "license": "ISC",
   "dependencies": {
-    "ffx": "^0.5.1",
     "next": "^4.1.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-ga": "^2.3.5"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
   }
 }

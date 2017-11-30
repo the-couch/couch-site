@@ -19,7 +19,7 @@ export default () => (
       <meta name='twitter:title' content='The Couch - Brooklyn Based Studio' />
       <meta name='twitter:description' content="This isn't where I left my website?" />
       <meta name='twitter:url' content='https://thecouch.nyc/' />
-      <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Roboto+Mono" rel="stylesheet" />
+      <link href='https://fonts.googleapis.com/css?family=Archivo+Black|Roboto+Mono' rel='stylesheet' />
       <meta name='twitter:image:src' content='https://s3.amazonaws.com/couchnyc/The_Couch.png' />
     </Head>
     <GlobalStyle />
