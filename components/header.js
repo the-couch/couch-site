@@ -13,9 +13,9 @@ export default () => (
       <meta name='og:image' content='https://s3.amazonaws.com/couchnyc/The_Couch.png' />
       <meta property='og:locale' content='en_US' />
       <link rel='shortcut icon' href='/static/favicon.gif' />
-      <meta property='og:site_name' content='The Couch - NYC Studio' />
+      <meta property='og:site_name' content='The Couch - Brooklyn Based Studio' />
       <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:title' content='The Couch - NYC Studio' />
+      <meta name='twitter:title' content='The Couch - Brooklyn Based Studio' />
       <meta name='twitter:description' content="This isn't where I left my website?" />
       <meta name='twitter:url' content='https://thecouch.nyc/' />
       <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Roboto+Mono" rel="stylesheet" />

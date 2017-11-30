@@ -2,6 +2,9 @@ import { Component } from 'react'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import ReactGA from 'react-ga'
+import Team from '../components/team'
+
+import API from '../api/team'
 
 const initGA = () => {
   ReactGA.initialize('UA-96992953-1')
@@ -17,6 +20,8 @@ export default class extends Component {
     logPageView()
   }
   render () {
+    const { data } = API
+    console.log('stuff', data)
     return (
       <Layout>
         <Header />
@@ -63,30 +68,10 @@ export default class extends Component {
             padding-top: 40px;
             padding-bottom: 50px;
           }
-          .footer__ppl {
-            width: 50%;
-            padding-bottom: 20px;
-          }
-          .footer__img {
-            min-height: 30px;
-          }
-          @media (min-width: 30em) {
-            .footer__ppl {
-              width: 33%;
-            }
-          }
-          @media (min-width: 50em) {
-            .footer__ppl {
-              width: 20%;
-            }
-          }
           @media (min-width: 80em) {
             .footer {
               max-width: 800px;
               width: 100%;
-            }
-            .footer__ppl {
-              padding-bottom: 0;
             }
             .footer__wrapper {
               display: flex;
@@ -100,10 +85,6 @@ export default class extends Component {
               bottom: 40px;
               width: calc(100% - 160px);
             }
-          }
-          .footer__ppl img {
-            max-width: 23px;
-            padding-bottom: 0px;
           }
           @keyframes rotating {
             0% {
@@ -130,36 +111,9 @@ export default class extends Component {
           </div>
           <div className='footer__wrapper'>
             <div className='footer caps f fw jcs fill-x'>
-              <div className='footer__ppl'>
-                <div className='footer__img'>
-                  <img src='/static/Kevin.png' />
-                </div>
-                <a href='http://districtdomain.com' target='_blank'>Kevin Green</a>
-              </div>
-              <div className='footer__ppl'>
-                <div className='footer__img'>
-                  <img src='/static/Sam.png' />
-                </div>
-                <a href='http://sam-faulkner.com' target='_blank'>Sam Faulkner</a>
-              </div>
-              <div className='footer__ppl'>
-                <div className='footer__img'>
-                  <img src='/static/costa.png' />
-                </div>
-                <a href='http://zeuslives.com' target='_blank'>Costa Damaskos</a>
-              </div>
-              <div className='footer__ppl'>
-                <div className='footer__img'>
-                  <img src='/static/abby.png' />
-                </div>
-                <a href='https://www.youtube.com/watch?v=Mw1tN-zfR9c' target='_blank'>Abby Muir</a>
-              </div>
-              <div className='footer__ppl'>
-                <div className='footer__img'>
-                  <img src='/static/eric.png' />
-                </div>
-                <a href='http://estrattonbailey.com/'>Eric Bailey</a>
-              </div>
+              {data.map((person) => (
+                <Team {...person} />
+              ))}
             </div>
             <div className='address__info f aic jce fill-x'>
               <div>
