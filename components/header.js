@@ -42,7 +42,7 @@ export default () => (
       @media (min-width: 45em) {
         h1 {
           font-size: 54px;
-          margin: 1rem 0 1.5rem;
+          margin: 1rem 0 1.8rem;
           line-height: 1;
         }
         .layout {

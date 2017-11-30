@@ -28,7 +28,6 @@ export default class extends Component {
             position: relative;
             width: 200px;
             height: 200px;
-            padding-top: 40px;
           }
           .contact__email {
             width: 28px;
@@ -37,7 +36,7 @@ export default class extends Component {
             width: 133px;
             animation: rotating 8s linear infinite;
             left: 30px;
-            top: 30%;
+            top: 36px;
             transform: translate(-50%, -50%);
           }
           @media (min-width: 45em) {
@@ -46,11 +45,11 @@ export default class extends Component {
               width: 200px;
               height: 200px;
               right: 80px;
-              top: 0px;
+              top: 20px;
             }
             .contact__rotate {
               width: 165px;
-              top: 24%;
+              top: 20px;
               left: 20px;
             }
             .contact__email {
