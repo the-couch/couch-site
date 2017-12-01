@@ -5,6 +5,9 @@ module.exports = ({ name, url, icon }) => (
         width: 50%;
         padding-bottom: 20px;
       }
+      .ppl a:hover {
+        text-decoration: underline;
+      }
       .ppl img {
         max-width: 23px;
         padding-bottom: 0px;
