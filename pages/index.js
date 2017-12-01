@@ -19,6 +19,10 @@ export default class extends Component {
     initGA()
     logPageView()
   }
+  audio (playing) {
+    const audio = document.getElementById('Audio')
+    playing ? audio.play() : audio.pause()
+  }
   render () {
     const { data } = API
     console.info("%c We're using Next.js for this because we got bored", 'background: #021993; color: #fff')
@@ -95,12 +99,35 @@ export default class extends Component {
               transform: rotate(360deg);
             }
           }
+          .period {
+            max-width: 8px;
+          }
+          .period:hover {
+            animation: rotating 0.5s linear infinite;
+          }
+          @media (min-width: 40em) {
+            .period {
+              max-width: 14px;
+            }
+          }
+          @media (min-width: 60em) {
+            .period {
+              max-width: 18px;
+            }
+          }
+          @media (min-width: 80em) {
+            .period {
+              max-width: 22px;
+            }
+          }
           `}</style>
         <div>
           <div className='wrapper main'>
             <section className='content'>
-              <h1 className='caps'>The Couch is a small brooklyn based digital studio that makes things for the internet.</h1>
+              <h1 className='caps'>The Couch is a small brooklyn based digital studio that makes things for the internet
+              <img onMouseOver={() => this.audio(true)} onMouseLeave={() => this.audio(false)} className='period' src='/static/CD.png' /></h1>
             </section>
+            <audio id='Audio' src='/static/8_bit.mp3' />
             <section className=''>
               <p className='small'>We want to work with you.</p>
             </section>
