@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import Layout from '../components/layout'
 import Header from '../components/header'
+import Window from '../components/window'
 import ReactGA from 'react-ga'
 import Team from '../components/team'
 
@@ -15,9 +16,23 @@ const logPageView = () => {
 }
 
 export default class extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      plantOne: false,
+      plantTwo: false
+    }
+  }
   componentDidMount () {
     initGA()
     logPageView()
+  }
+  toggleOffice () {
+    this.setState({
+      plantOne: true,
+      plantTwo: true
+    })
   }
   render () {
     const { data } = API
@@ -63,7 +78,7 @@ export default class extends Component {
             }
           }
           .address {
-            max-width: 40px;
+            max-width: 70px;
           }
           .footer {
             padding-top: 40px;
@@ -97,6 +112,8 @@ export default class extends Component {
           }
           `}</style>
         <div>
+          {this.state.plantOne && (<Window close={() => this.setState({plantOne: false})}><img style={{width: '100%'}} src='/static/palm.png' /></Window>)}
+          {this.state.plantTwo && (<Window close={() => this.setState({plantTwo: false})}><img style={{width: '100%'}} src='/static/paradise.png' /></Window>)}
           <div className='wrapper main'>
             <section className='content'>
               <h1 className='caps'>The Couch is a small brooklyn based digital studio that makes things for the internet.</h1>
@@ -120,7 +137,7 @@ export default class extends Component {
               <div>
                 <p className='ar caps'>Available IRL @<br />87 Richardson St. Suite 6W<br />Brooklyn, NY 11211</p>
               </div>
-              <div>
+              <div onClick={() => this.toggleOffice()}>
                 <img className='address px1' src='/static/Address.png' />
               </div>
             </div>

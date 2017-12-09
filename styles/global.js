@@ -1,6 +1,9 @@
 module.exports = () => (
   <div>
     <style global jsx>{`
+      * {
+        box-sizing: border-box;
+      }
       body, html {
         background: #021993;
         font-family: 'Roboto Mono', monospace;
