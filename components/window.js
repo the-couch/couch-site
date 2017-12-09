@@ -1,8 +1,6 @@
 import { Component } from 'react'
 import Draggable from 'react-draggable'
 
-const height = window.innerHeight
-const width = window.innerWidth
 
 
 export default class extends Component {
@@ -14,6 +12,8 @@ export default class extends Component {
   }
   render () {
 
+    const height = window.innerHeight
+    const width = window.innerWidth
     const top = (height / 2 * Math.random())
     const left = (width / 1.4 * Math.random())
 
