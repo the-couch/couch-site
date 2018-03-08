@@ -39,6 +39,7 @@ export default class extends Component {
               width: 100%;
               text-align: center;
               padding: 8px;
+              cursor: move;
               border-bottom: 1px solid #000;
             }
             .window__header h5 {

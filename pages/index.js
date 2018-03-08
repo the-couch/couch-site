@@ -15,6 +15,25 @@ const logPageView = () => {
   ReactGA.pageview(window.location.pathname)
 }
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 export default class extends Component {
   constructor (props) {
     super(props)
@@ -40,6 +59,7 @@ export default class extends Component {
   }
   render () {
     const { data } = API
+    const newArray = shuffle(data)
     console.info("%c We're using Next.js for this because we got bored", 'background: #021993; color: #fff')
     console.info("%c The code's up on our git: https://github.com/the-couch/couch-site", 'background: #021993; color: #fff')
     return (
@@ -156,7 +176,7 @@ export default class extends Component {
           </div>
           <div className='footer__wrapper'>
             <div className='footer caps f fw jcs fill-x'>
-              {data.map((person, i) => (
+              {newArray.map((person, i) => (
                 <Team key={i} {...person} />
               ))}
             </div>
