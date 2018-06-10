@@ -59,7 +59,6 @@ export default class extends Component {
   }
   render () {
     const { data } = API
-    const newArray = shuffle(data)
     console.info("%c We're using Next.js for this because we got bored", 'background: #021993; color: #fff')
     console.info("%c The code's up on our git: https://github.com/the-couch/couch-site", 'background: #021993; color: #fff')
     return (
@@ -119,7 +118,7 @@ export default class extends Component {
               justify-content: space-between;
             }
           }
-          @media (min-height: 900px) and (min-width: 700px) {
+          @media (min-height: 1100px) and (min-width: 700px) {
             .footer__wrapper {
               position: fixed;
               bottom: 40px;
@@ -176,7 +175,7 @@ export default class extends Component {
           </div>
           <div className='footer__wrapper'>
             <div className='footer caps f fw jcs fill-x'>
-              {newArray.map((person, i) => (
+              {data.map((person, i) => (
                 <Team key={i} {...person} />
               ))}
             </div>
