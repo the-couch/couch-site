@@ -20,7 +20,7 @@ export default class extends Component {
     return (
       <Draggable
         grid={[10, 10]}>
-        <div className='window' onClick={() => console.log('stuff')}d>
+        <div className='window'>
           <style jsx>{`
             .window {
               position: fixed;

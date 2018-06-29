@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'Kevin Green',
       icon: 'Kevin.png',
-      url: 'http://districtdomain.com'
+      url: 'https://kevingreen.sucks'
     },
     {
       name: 'Sam Faulkner',
