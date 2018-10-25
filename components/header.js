@@ -29,7 +29,7 @@ export default () => (
       }
       `}</style>
     <div>
-      <img className='header' src='/static/faces.gif' />
+      <a href='https://instagram.com/thecouch.nyc' target='_blank'><img className='header' src='/static/faces.gif' /></a>
       <p className='small pt2'>Hello world!</p>
     </div>
   </div>
